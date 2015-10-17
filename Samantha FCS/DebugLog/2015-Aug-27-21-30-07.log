@@ -1,0 +1,36 @@
+LOG START on  at Thursday 27-Aug-2015 09:30:07 PM Eastern Daylight Time
+09:30:07: 0.016  *    Start Listener: Local address: 192.168.0.7
+09:30:07: 0.063  0    Close Connection
+09:30:07: 0.063  0    Close Connection
+09:30:07: 0.063  0    Close Connection
+09:30:07: 0.063  0    Close Connection
+09:30:07: 0.234  0    Close Connection
+09:30:07: 0.234  1    Close Connection
+09:30:07: 0.234  2    Close Connection
+09:30:07: 0.234  3    Close Connection
+09:31:18: 71.480  -1 1129 Timer Ticks
+09:31:18: 71.480  0    Close Connection
+09:31:18: 71.480  1    Close Connection
+09:31:18: 71.480  2    Close Connection
+09:31:18: 71.480  3    Close Connection
+09:31:24: 77.470  -1 129 Timer Ticks
+09:31:24: 77.470  *    Start Match Requested
+09:31:24: 77.470  *    Teleop: 05:00
+09:31:29: 82.211  -1 101 Timer Ticks
+09:31:29: 82.211  *    Start Teleop mode
+09:31:34: 87.684  -1 110 Timer Ticks
+09:31:34: 87.684  *    Stop Match Requested
+09:32:21: 134.598  -1 1002 Timer Ticks
+09:32:21: 134.598  0    Close Connection
+09:32:21: 134.598  1    Close Connection
+09:32:21: 134.598  2    Close Connection
+09:32:21: 134.598  3    Close Connection
+09:35:08: 301.329  -1 3533 Timer Ticks
+09:35:08: 301.329  0    Close Connection
+09:35:08: 301.329  1    Close Connection
+09:35:08: 301.329  2    Close Connection
+09:35:08: 301.329  3    Close Connection
+09:35:08: 301.345  0    Close Connection
+09:35:08: 301.345  1    Close Connection
+09:35:08: 301.345  2    Close Connection
+09:35:08: 301.345  3    Close Connection

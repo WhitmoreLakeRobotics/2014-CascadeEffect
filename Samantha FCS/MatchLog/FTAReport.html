@@ -1,0 +1,1188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title></title>
+
+<!--$Date: 12/31/11 9:46p $-->
+<!--$Revision: 19 $-->
+
+<STYLE TYPE="text/css">
+<!--
+body {
+	font: 75% georgia, sans-serif;
+	line-height: 1.88889;
+	color: #555753;
+	margin: 0;
+	padding: 0;
+	}
+
+h2 {
+	font: italic normal 1.4em georgia, sans-serif;
+	letter-spacing: 1px;
+	margin-bottom: 0;
+	color: #7D775C;
+	}
+
+#pageHeader h2 {
+	margin-top: 10px;
+	height: 64px;
+	float: left;
+	text-align:center;
+      }
+#pageHeader h2 {
+	padding-top: 20px;
+
+	}
+
+hr {
+	/* border: 30px ridge #cf0; */
+	width: 100%;
+	height: 6px;
+	margin: 0;
+	}
+
+caption.files {
+	padding: 0 0 5px 0;
+	font: italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	text-align: left;
+}
+
+.wideselect{
+	width:100%;
+}
+div.scroll {
+	height:200px;
+	overflow:auto;
+}
+div.noScroll {
+	width:100%;
+	overflow:hidden;
+}
+table.batteryBar{
+	border-collapse:collapse;
+	height:20px;
+	width:75px;
+}
+td.drill
+{
+	text-align:right;
+}
+td.top_left_label {
+	color: #4f6b72;
+	border-left: 1px solid #C1DAD7;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	text-transform: uppercase;
+	text-align: left;
+	background: #FAF0E6 ;
+}
+td.top_label {
+	color: #4f6b72;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	text-transform: uppercase;
+	text-align: left;
+	background: #FAF0E6 ;
+}
+.red_label {
+	color: #4f6b72;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	text-transform: uppercase;
+	text-align: left;
+	background: #FFB0B0 ;
+}
+.blue_label {
+	color: #4f6b72;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	text-transform: uppercase;
+	text-align: left;
+	background:  #B0E6EC ;
+}
+th.label {
+	color: #4f6b72;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	text-transform: uppercase;
+	text-align: left;
+	background: #CAE8EA ;
+}
+td.batteryBar_0 {
+	background: #F0C0C0;
+	display:none;
+}
+td.batteryBar_1 {
+	background: #FFDCC0;
+	display:none;
+}
+td.batteryBar_2 {
+	background: #FFFFBF;
+	display:none;
+}
+td.batteryBar_3 {
+	background: #C0FFC0;
+	display:none;
+}
+td.value {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #fff;
+	color: #4f6b72;
+	height:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-right:0px;
+    margin-left:0px;
+}
+td.value_left {
+	border-left: 1px solid #C1DAD7;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #fff;
+	color: #4f6b72;
+	height:100%;
+    margin-top:0px;
+    margin-bottom:0px;
+    margin-right:0px;
+    margin-left:0px;
+}
+td.top_value {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	background: #fff;
+	height:100%;
+	color: #4f6b72;
+	margin-top:0px;
+    margin-bottom:0px;
+    margin-right:0px;
+    margin-left:0px;
+}
+td.top_value_left {
+	border-left: 1px solid #C1DAD7;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	background: #fff;
+	height:100%;
+	color: #4f6b72;
+	margin-top:0px;
+    margin-bottom:0px;
+    margin-right:0px;
+    margin-left:0px;
+}
+td.top_numeric_value_left {
+	border-left: 1px solid #C1DAD7;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	background: #fff;
+	color: #4f6b72;
+	text-align: right;
+}
+td.top_numeric_value {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	background: #fff;
+	color: #4f6b72;
+	text-align: right;
+}
+td.top_numeric_error_value {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	background: #F0C0C0;
+	color: #4f6b72;
+	text-align: right;
+}
+td.numeric_value {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #fff;
+	color: #4f6b72;
+	text-align: right;
+}
+td.numeric_error_value {
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #F0C0C0;
+	color: #4f6b72;
+	text-align: right;
+}
+td.numeric_value_left {
+	border-left: 1px solid #C1DAD7;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	background: #fff;
+	color: #4f6b72;
+	text-align: right;
+}
+th.label_value {
+	font: italic 11px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	border-left: 1px solid #C1DAD7;
+}
+-->
+</style>
+
+</head>
+<script type="text/javascript">
+    function Match(matchNumber, matchTime, matchAutonomous, matchTeleop, matchStatus) {
+        var match = new Object();
+
+        match.number = matchNumber;
+        match.time = matchTime;
+        match.autonoumous = matchAutonomous;
+        match.teleop = matchTeleop;
+        match.status = matchStatus;
+        match.teams = new Array();
+
+        return match;
+    }
+</script>
+<script type="text/javascript">
+    function Team(teamMatch, teamNumber, teamPosition, teamJoystickSent, teamJoystickLost, teamJoystickDisc,
+                                                 NXTDisconnects, NXTVoltStart, NXTVoltEnd, RobotVoltStart, RobotVoltEnd,
+                                                 teleopName, initialProgram, notes,
+                                                 freqVoltCritical, freqVoltError, freqVoltWarn, freqVoltSafe,
+                                                 NXTVoltMin, NXTVoltMax) {
+        var teamInfo = new Object();
+
+        teamInfo.number = teamNumber;
+        teamInfo.match = teamMatch;
+
+        var parts = teamPosition.split(" ");
+        teamInfo.color = parts[0];
+        teamInfo.position = parts[2];
+
+        teamInfo.joystickSent = teamJoystickSent;
+        teamInfo.joystickLost = teamJoystickLost;
+        teamInfo.joystickDisc = teamJoystickDisc;
+        teamInfo.NXTDisconnects = NXTDisconnects;
+        teamInfo.NXTVoltStart = Number(NXTVoltStart.substring(0, NXTVoltStart.length - 1));
+        teamInfo.NXTVoltEnd = Number(NXTVoltEnd.substring(0, NXTVoltEnd.length - 1));
+        teamInfo.RobotVoltStart = RobotVoltStart;
+        teamInfo.RobotVoltEnd = RobotVoltEnd;
+        teamInfo.teleopName = teleopName;
+        teamInfo.initialProgram = initialProgram;
+        teamInfo.notes = notes;
+
+        parts = notes.split(" ");
+        teamInfo.protocolVersion = parts[0];
+        teamInfo.NXTFirmware = parts[1];
+        var samanthaParts = parts[2].split("/");
+        var len = samanthaParts[0].length
+        teamInfo.SamanthaFirmware = samanthaParts[0].substring(1, len);
+
+
+        teamInfo.freqVoltCritical = Number(freqVoltCritical);
+        teamInfo.freqVoltError = Number(freqVoltError);
+        teamInfo.freqVoltWarn = Number(freqVoltWarn);
+        teamInfo.freqVoltSafe = Number(freqVoltSafe);
+        teamInfo.NXTVoltMin = Number(NXTVoltMin.substring(0, NXTVoltMin.length - 1));
+        teamInfo.NXTVoltMax = Number(NXTVoltMax.substring(0, NXTVoltMax.length - 1));
+
+        var nSamples = teamInfo.freqVoltCritical +
+	                  teamInfo.freqVoltError +
+	                  teamInfo.freqVoltWarn +
+	                  teamInfo.freqVoltSafe;
+
+        if (nSamples) {
+            teamInfo.freqVoltCritical = 100 * teamInfo.freqVoltCritical / nSamples;
+            teamInfo.freqVoltError = 100 * teamInfo.freqVoltError / nSamples;
+            teamInfo.freqVoltWarn = 100 * teamInfo.freqVoltWarn / nSamples;
+            teamInfo.freqVoltSafe = 100 * teamInfo.freqVoltSafe / nSamples;
+        }
+
+        teamInfo.matchListIndex = -1;
+        return teamInfo;
+    }
+</script>
+<script type="text/javascript">
+    var matchArray = new Array();
+    var teamMatchList = new Array();
+    var currentSelectedMatch = null;
+
+    function addMatchData(cells)
+    {
+       var matchNumber;
+       var matchTime;
+       var matchAutonomous;
+       var matchTeleop;
+       var matchStatus;
+       var teamNumber;
+       var teamPosition;
+       var teamJoystickSent;
+       var teamJoystickLost;
+       var teamJoystickDisc;
+       var NXTDisconnects;
+       var NXTVoltStart;
+       var NXTVoltEnd;
+       var RobotVoltStart;
+       var RobotVoltEnd;
+       var teleopName;
+       var initialProgram;
+       var notes;
+       var freqVoltCritical;
+       var freqVoltError;
+       var freqVoltWarn;
+       var freqVoltSafe;
+       var NXTVoltMin;
+       var NXTVoltMax;
+
+        matchNumber		= cells[0].innerHTML;
+        matchTime 		= cells[1].innerHTML;
+        matchAutonomous = cells[2].innerHTML;
+        matchTeleop		= cells[3].innerHTML;
+        matchStatus		= cells[4].innerHTML;
+        teamNumber		= cells[5].innerHTML;
+        teamPosition	= cells[6].innerHTML;
+        teamJoystickSent= cells[7].innerHTML;
+        teamJoystickLost= cells[8].innerHTML;
+        teamJoystickDisc= cells[9].innerHTML;
+        NXTDisconnects	= cells[10].innerHTML;
+        NXTVoltStart	= cells[11].innerHTML;
+        NXTVoltEnd		= cells[12].innerHTML;
+        RobotVoltStart	= cells[13].innerHTML;
+        RobotVoltEnd	= cells[14].innerHTML;
+        teleopName		= cells[15].innerHTML;
+        initialProgram	= cells[16].innerHTML;
+        notes			= cells[17].innerHTML;
+        freqVoltCritical= cells[18].innerHTML;
+        freqVoltError	= cells[19].innerHTML;
+        freqVoltWarn	= cells[20].innerHTML;
+        freqVoltSafe	= cells[21].innerHTML;
+        NXTVoltMin		= cells[22].innerHTML;
+        NXTVoltMax		= cells[23].innerHTML;
+
+        var nMatch = -1;
+        for (var ii = 0; ii < matchArray.length; ii++) {
+            match = matchArray[ii];
+            if (match.number == matchNumber) {
+                if (match.time == matchTime) {
+                    nMatch = ii;
+                    break;
+                }
+            }
+        }
+        if (nMatch == -1) {
+            nMatch = matchArray.length;
+            matchArray[nMatch] = Match(matchNumber, matchTime, matchAutonomous, matchTeleop, matchStatus);
+        }
+
+        var nTeam = -1;
+        for (var ii = 0; ii < matchArray[nMatch].teams.length; ii++) {
+            var team = matchArray[nMatch].teams[ii];
+            if (team.number == teamNumber) {
+                nTeam = ii;
+            }
+        }
+        if (nTeam == -1) {
+            nTeam = matchArray[nMatch].teams.length;
+            var team = new Team(nMatch, teamNumber, teamPosition, teamJoystickSent, teamJoystickLost, teamJoystickDisc,
+                           NXTDisconnects, NXTVoltStart, NXTVoltEnd, RobotVoltStart, RobotVoltEnd,
+                           teleopName, initialProgram, notes,
+                           freqVoltCritical, freqVoltError, freqVoltWarn, freqVoltSafe,
+                           NXTVoltMin, NXTVoltMax);
+
+            matchArray[nMatch].teams[nTeam] = team;
+
+            for (var ii = 0; ii < teamMatchList.length; ii++) {
+                var teamMatchListEntry = teamMatchList[ii];
+                if (teamMatchListEntry.number == team.number) {
+                    team.matchListIndex = ii;
+                    var length = teamMatchListEntry.matches.length;
+                    teamMatchListEntry.matches[length] = matchArray[nMatch];
+                    break;
+                }
+            }
+            if (ii == teamMatchList.length) {
+                team.matchListIndex = ii;
+                teamMatchList[ii] = new Object();
+                teamMatchList[ii].number = team.number;
+                teamMatchList[ii].matches = new Array();
+                teamMatchList[ii].matches[0] = matchArray[nMatch];
+            }
+        }
+    }
+
+</script>
+<script type="text/javascript">
+    // Fast javascript function to clear all the options in an HTML select element
+    // Provide the id of the select element
+    // References to the old <select> object will become invalidated!
+    // This function returns a reference to the new select object.
+    function clearOptionsFast(id) {
+        var selectObj = document.getElementById(id);
+        var selectParentNode = selectObj.parentNode;
+        var newSelectObj = selectObj.cloneNode(false); // Make a shallow copy
+        selectParentNode.replaceChild(newSelectObj, selectObj);
+        return newSelectObj;
+    }
+
+</script>
+<script type="text/javascript">
+    function populateMatchListDropDown() {
+        var matchListDropDown = document.getElementById("matchListDropDown");
+        for (var ii = 0; ii < matchArray.length; ii++) {
+            var teams = "";
+            var match = matchArray[ii];
+            for (var jj = 0; jj < match.teams.length; jj++) {
+                var team = match.teams[jj];
+                if (team != null) {
+                    if (teams.length > 0)
+                        teams = teams + ", ";
+                    teams = teams + team.number;
+                }
+            }
+            var text = "Match " + matchArray[ii].number + ": [ " + teams + " ] " + matchArray[ii].status + " on " + matchArray[ii].time;
+            var option = new Option(text);
+            option.value = ii;
+            matchListDropDown.options[matchListDropDown.options.length] = option;
+        }
+    }
+</script>
+<script type="text/javascript">
+    function onLoad() {
+
+		var tables  = window.frames[0].document.getElementsByTagName("table");
+		if ((tables == null)  || (tables.length == 0) )
+		{
+		   alert("The file " + window.frames[0].document.location.href + " apears to be an old format. Please delete it");
+		}
+
+    	for (var ii=0; ii< tables.length; ii++)
+    	{
+			var table     = tables[ii];
+			var tablebody = table.getElementsByTagName("tbody")[0];
+			var row       = tablebody.getElementsByTagName("tr")[0];
+			var cells     = row.getElementsByTagName("td");
+			addMatchData(cells);
+    	}
+
+        clearOptionsFast("matchListDropDown");
+        populateMatchListDropDown();
+
+        var matchListDropDown = document.getElementById("matchListDropDown");
+        matchListDropDown.options.selectedIndex = 0;
+        displayMatchDetails();
+    }
+
+</script>
+<script type="text/javascript">
+    function setBarSegment(element, value) {
+        if (element == null)
+           return;
+        if (value >=1) {
+            element.width = value + "%";
+            element.style.display = "table-cell";
+        }
+        else {
+            element.style.display = "none";
+        }
+    }
+</script>
+<script type="text/javascript">
+    function setBar(element, value1, value2, value3, value4, mouseOverText) {
+
+        var bars = element.getElementsByTagName("td");
+        setBarSegment(bars[0], value1);
+        setBarSegment(bars[1], value2);
+        setBarSegment(bars[2], value3);
+        setBarSegment(bars[3], value4);
+
+        element.onmouseover = new Function('tooltip.show("' + mouseOverText + '")');
+        element.onmouseout = function () { tooltip.hide(); };
+
+    }
+</script>
+<script type="text/javascript">
+    function createBar(td) {
+        var className = "batteryBar_";
+        var tbl = document.createElement("table");
+        tbl.className = "batteryBar";
+        var tblBody = document.createElement("tbody");
+        var tr = document.createElement("tr");
+        for (var ii = 0; ii < 4; ii++) {
+            var cell = document.createElement("td");
+            cell.className = className  + ii;
+            tr.appendChild(cell);
+        }
+        tblBody.appendChild(tr);
+        tbl.appendChild(tblBody);
+        td.appendChild(tbl);
+    }
+</script>
+<script type="text/javascript">
+    function displayThisMatch(match) {
+        clearMatchRow("Red", 1);
+        clearMatchRow("Red", 2);
+        clearMatchRow("Blue", 1);
+        clearMatchRow("Blue", 2);
+
+         for (var ii = 0; ii < 4; ii++) {
+            if (ii < match.teams.length) {
+
+                var team_id  = "Team_" + match.teams[ii].color + "_" + match.teams[ii].position;
+                populateMatchRow(team_id, match.teams[ii], null);
+            }
+        }
+    }
+</script>
+<script type="text/javascript">
+    function displayMatchDetails() {
+        var matchListDropDown = document.getElementById("matchListDropDown");
+
+        if (matchListDropDown.options.selectedIndex >= 0)
+        {
+           var selectedValue = matchListDropDown.options[matchListDropDown.options.selectedIndex].value;
+           var match = matchArray[selectedValue];
+           displayThisMatch(match);
+           currentSelectedMatch = match;
+        }
+    }
+</script>
+<script type="text/javascript">
+    function clearMatchRow(color, jj) {
+
+        var id = "Team_" + color + "_" + jj;
+        collapseTeamMatches(id);
+
+        id = id + "_Row";
+        var element = document.getElementById(id);
+        var elements = element.childNodes;
+
+        var team_id = "Team_" + color + "_" + jj;
+
+        cell = document.getElementById(team_id);
+        cell.innerHTML = "";
+
+        cell = document.getElementById(team_id + "_Drill");
+        cell.innerHTML = "";
+        cell.title = "";
+
+        cell = document.getElementById(team_id + "_Sent");            cell.innerHTML = "&nbsp";
+        cell = document.getElementById(team_id + "_Lost");            cell.innerHTML = "&nbsp";
+        cell = document.getElementById(team_id + "_Disconnects");     cell.innerHTML = "&nbsp";
+        cell = document.getElementById(team_id + "_Samantha");        cell.innerHTML = "&nbsp";
+        cell = document.getElementById(team_id + "_Min");             cell.innerHTML = "&nbsp";
+        cell = document.getElementById(team_id + "_Max");             cell.innerHTML = "&nbsp";
+        cell = document.getElementById(team_id + "_Battery");         setBar(cell, 0, 0, 0, 0, "");
+        cell = document.getElementById(team_id + "_Autonomous");      cell.innerHTML = "&nbsp";
+        cell = document.getElementById(team_id + "_Teleop");          cell.innerHTML = "&nbsp";
+        cell = document.getElementById(team_id + "_Firmware");        cell.innerHTML = "&nbsp";
+        cell = document.getElementById(team_id + "_Start");           cell.innerHTML = "&nbsp";
+        cell = document.getElementById(team_id + "_End");             cell.innerHTML = "&nbsp";
+        cell = document.getElementById(team_id + "_NXT_Disconnects"); cell.innerHTML = "&nbsp";
+
+    }
+</script>
+<script type="text/javascript">
+    function populateMatchRow(team_id, team, nMatch) {
+
+       var element = document.getElementById(team_id + "_Row");
+
+       var elements = element.childNodes;
+
+        var td = element.getElementsByTagName("td")[0];
+        var table = td.getElementsByTagName("table")[0];
+        var cells = table.getElementsByTagName("td");
+        if (nMatch == null) {
+            cells[0].innerHTML = team.number;
+            if (teamMatchList[team.matchListIndex].matches.length > 1) {
+                cells[1].innerHTML = "+";
+                cells[1].title = "Team was in " + teamMatchList[team.matchListIndex].matches.length + "other matches";
+            }
+        }
+        else {
+            if (nMatch == '>') {
+                cells[1].innerHTML = nMatch;
+                if (team.color == "Red") {
+                    cells[1].className = "red_label";
+                }
+                else {
+                    cells[1].className = "blue_label";
+                }
+            }
+            else {
+                cells[0].innerHTML = nMatch;
+            }
+        }
+
+        var cell;
+        cell = document.getElementById(team_id + "_Sent"); 		      cell.innerHTML = team.joystickSent;
+        cell = document.getElementById(team_id + "_Lost");            cell.innerHTML = team.joystickLost;
+        cell = document.getElementById(team_id + "_Disconnects");     cell.innerHTML = team.joystickDisc;
+        var prefix = cell.className.substr(0, 4);
+        if (prefix != "top_")
+           prefix = "";
+
+        if (team.joystickDisc == "0")
+           cell.className = prefix + "numeric_value";
+        else
+           cell.className = prefix + "numeric_error_value";
+
+
+        cell = document.getElementById(team_id + "_Samantha");        cell.innerHTML = team.SamanthaFirmware;
+        cell = document.getElementById(team_id + "_Min");             cell.innerHTML = team.NXTVoltMin.toFixed(2);
+        cell = document.getElementById(team_id + "_Max");             cell.innerHTML = team.NXTVoltMax.toFixed(2);
+
+        var mouseOverText = "";
+        if (team.freqVoltCritical > 0)
+            mouseOverText += "Less than <b>7</b> Volts <b>" + team.freqVoltCritical.toFixed(2) + "%</b> of the time<br>";
+        if (team.freqVoltError > 0)
+            mouseOverText += "Less than <b>9</b> Volts <b>" + team.freqVoltError.toFixed(2) + "%</b> of the time<br>";
+        if (team.freqVoltWarn > 0)
+            mouseOverText += "Less than <b>11</b> Volts <b>" + team.freqVoltWarn.toFixed(2) + "%</b> of the time<br>";
+        if (team.freqVoltSafe > 0)
+            mouseOverText += "At or above <b>11</b> Volts <b>" + team.freqVoltSafe.toFixed(2) + "%</b> of the time";
+
+        cell = document.getElementById(team_id + "_Battery");
+        setBar(cell, team.freqVoltCritical, team.freqVoltError, team.freqVoltWarn, team.freqVoltSafe, mouseOverText);
+
+        cell = document.getElementById(team_id + "_Autonomous");      cell.innerHTML = team.initialProgram;
+        cell = document.getElementById(team_id + "_Teleop");          cell.innerHTML = team.teleopName;
+        cell = document.getElementById(team_id + "_Firmware");        cell.innerHTML = team.NXTFirmware;
+        cell = document.getElementById(team_id + "_Start");           cell.innerHTML = team.NXTVoltStart.toFixed(2);
+        cell = document.getElementById(team_id + "_End");             cell.innerHTML = team.NXTVoltEnd.toFixed(2);
+        cell = document.getElementById(team_id + "_NXT_Disconnects"); cell.innerHTML = team.NXTDisconnects;
+
+        prefix = cell.className.substr(0, 4);
+        if (prefix != "top_")
+           prefix = "";
+
+        if (team.NXTDisconnects == "0")
+           cell.className = prefix + "numeric_value";
+        else
+           cell.className = prefix + "numeric_error_value";
+
+
+
+    }
+</script>
+<script type="text/javascript">
+
+    var tooltip = function () {
+        var id = 'tt';
+        var top = 3;
+        var left = 3;
+        var offset = 12;
+        var maxw = 600;
+        var speed = 10;
+        var timer = 20;
+        var endalpha = 95;
+        var alpha = 0;
+        var tt, t, c, b, h;
+        var ie = document.all ? true : false;
+        return {
+            show: function (v, w) {
+                if (tt == null) {
+                    tt = document.createElement('div');
+                    tt.setAttribute('id', id);
+                    t = document.createElement('div');
+                    t.setAttribute('id', id + 'top');
+                    c = document.createElement('div');
+                    c.setAttribute('id', id + 'cont');
+                    b = document.createElement('div');
+                    b.setAttribute('id', id + 'bot');
+                    tt.appendChild(t);
+                    tt.appendChild(c);
+                    tt.appendChild(b);
+                    document.body.appendChild(tt);
+                    tt.style.opacity = 0;
+                    tt.style.filter = 'alpha(opacity=0)';
+                    tt.style.position = "absolute";
+                    tt.style.background = "#FAF0E6";
+                    tt.style.borderStyle = "solid";
+                    tt.style.borderWidth = "1px";
+                    tt.style.borderColor = "#C1DAD7";
+                    tt.style.paddingLeft = "3px";
+                    document.onmousemove = this.pos;
+                }
+                tt.style.display = 'block';
+                c.innerHTML = v;
+                tt.style.width = w ? w + 'px' : 'auto';
+                if (!w && ie) {
+                    t.style.display = 'none';
+                    b.style.display = 'none';
+                    tt.style.width = tt.offsetWidth;
+                    t.style.display = 'block';
+                    b.style.display = 'block';
+                }
+                if (tt.offsetWidth > maxw) { tt.style.width = maxw + 'px' }
+                h = parseInt(tt.offsetHeight) + top;
+                clearInterval(tt.timer);
+                tt.timer = setInterval(function () { tooltip.fade(1) }, timer);
+            },
+            pos: function (e) {
+                var u = ie ? event.clientY + document.documentElement.scrollTop : e.pageY;
+                var l = ie ? event.clientX + document.documentElement.scrollLeft : e.pageX;
+                tt.style.top = (u + offset) + 'px';
+                tt.style.left = (l - tt.clientWidth + offset) + 'px';
+            },
+            fade: function (d) {
+                var a = alpha;
+                if ((a != endalpha && d == 1) || (a != 0 && d == -1)) {
+                    var i = speed;
+                    if (endalpha - a < speed && d == 1) {
+                        i = endalpha - a;
+                    } else if (alpha < speed && d == -1) {
+                        i = a;
+                    }
+                    alpha = a + (i * d);
+                    tt.style.opacity = alpha * .01;
+                    tt.style.filter = 'alpha(opacity=' + alpha + ')';
+                } else {
+                    clearInterval(tt.timer);
+                    if (d == -1) { tt.style.display = 'none' }
+                }
+            },
+            hide: function () {
+                clearInterval(tt.timer);
+                tt.timer = setInterval(function () { tooltip.fade(-1) }, timer);
+            }
+        };
+    } ();
+</script>
+<script type="text/javascript">
+    function ExpandCollapseTeamMatches(team_id) {
+
+        var drill = document.getElementById(team_id + "_Drill");
+        if (drill == null)
+        {
+           return;
+        }
+        else
+        {
+        if (drill.innerHTML == "+")
+        {
+            expandTeamMatches(team_id);
+        }
+        else
+        {
+            collapseTeamMatches(team_id);
+        }
+        }
+    }
+</script>
+<script type="text/javascript">
+    function collapseTeamMatches(team_id) {
+        var drill = document.getElementById(team_id + "_Drill");
+        if (drill == null)
+        {
+           alert("can not find object with id: " + team_id + "_Drill");
+           return;
+        }
+
+        if (drill.innerHTML == "+")
+            return;
+        if (drill.innerHTML == "")
+            return;
+        drill.innerHTML = "+";
+
+        var element = document.getElementById(team_id);
+        var teamNumber = element.innerHTML;
+        if (teamNumber == "")
+            return;
+
+        var collapseMatch = currentSelectedMatch;
+        var currentTeam = null;
+        for (var ii = 0; ii < collapseMatch.teams.length; ii++) {
+            if (collapseMatch.teams[ii].number == teamNumber) {
+                currentTeam = collapseMatch.teams[ii];
+                break;
+            }
+        }
+
+        var idealRow = document.getElementById(team_id + "_Row");
+        var nRow = idealRow.rowIndex + 1;
+
+        var tbl = document.getElementById("matchDetailsTable");
+        var matchList = teamMatchList[currentTeam.matchListIndex].matches;
+
+        for (var ii = 0; ii < matchList.length; ii++) {
+            tbl.deleteRow(nRow);
+        }
+
+        if (nRow < tbl.rows.length) {
+            var nextRow = tbl.rows[nRow];
+            for (var ii = 0; ii < nextRow.cells.length; ii++) {
+                var prefix = nextRow.cells[ii].className.substr(0, 4)
+                if (prefix == "top_")
+                    nextRow.cells[ii].className = nextRow.cells[ii].className.substr(4);
+            }
+        }
+
+    }
+</script>
+<script type="text/javascript">
+    function expandTeamMatches(team_id)
+    {
+        var drill = document.getElementById(team_id + "_Drill");
+        if (drill.innerHTML == "-")
+            return;
+        if (drill.innerHTML == "")
+            return;
+        drill.innerHTML = "-";
+
+        var matchListDropDown = document.getElementById("matchListDropDown");
+        var selectedIndex = matchListDropDown.options.selectedIndex;
+        var selectedValue = matchListDropDown.options[selectedIndex].value;
+        var expandMatch = matchArray[selectedValue];
+        var currentTeam = null;
+
+        var matchDetailsTable = document.getElementById("matchDetailsTable");
+        var rows = matchDetailsTable.getElementsByTagName("tr");
+
+        var idealRow = document.getElementById(team_id + "_Row");
+
+        var node = idealRow.nextSibling
+        while (node != null)
+        {
+            if (node.nodeType == 1)
+            {
+               for (var ii = 0; ii < node.cells.length; ii++)
+               {
+                   if ((node.cells[ii].className == "value") ||
+                    (node.cells[ii].className == "numeric_value") )
+                   node.cells[ii].className = "top_" + node.cells[ii].className;
+               }
+               break;
+            }
+            node = node.nextSibling
+        }
+
+        var nRow = idealRow.rowIndex+1;
+
+        var element = document.getElementById(team_id);
+        var teamNumber = element.innerHTML;
+        for (var ii = 0; ii < expandMatch.teams.length; ii++) {
+            if (expandMatch.teams[ii].number == teamNumber) {
+                currentTeam = expandMatch.teams[ii];
+                break;
+            }
+        }
+
+        var tbl = document.getElementById("matchDetailsTable");
+        var matchList = teamMatchList[currentTeam.matchListIndex].matches;
+		var classPrefix = "top_";
+        for (var ii = 0; ii < matchList.length; ii++) {
+            var match = matchList[ii];
+
+
+            for (jj = 0; jj < 4; jj++) {
+                if (match.teams[jj].number == currentTeam.number)
+                    break;
+            }
+            var team = match.teams[jj];
+
+            var match_id  = "Match_"+ii+ team_id;
+
+            var td = null;
+            var row = tbl.insertRow(nRow);
+            row.id = match_id + "_Row";
+            nRow += 1;
+
+             td = row.insertCell(-1);
+             td.id = team_id + "_Label";
+             td.className = classPrefix + "value";
+
+             var inner_tbl = document.createElement("table");
+             var tblBody = document.createElement("tbody");
+             var tr = document.createElement("tr");
+             var cell = document.createElement("td");
+             cell.width = "100%";
+             tr.appendChild(cell);
+             cell = document.createElement("td");
+             tr.appendChild(cell);
+
+             tblBody.appendChild(tr);
+             inner_tbl.appendChild(tblBody);
+             td.appendChild(inner_tbl);
+
+             td = row.insertCell(-1);
+             td.id = match_id + "_Sent";
+             td.className = classPrefix + "numeric_value_left";
+
+             td = row.insertCell(-1);
+             td.id = match_id + "_Lost";
+             td.className = classPrefix + "numeric_value";
+
+             td = row.insertCell(-1);
+             td.id = match_id + "_Disconnects";
+             td.className = classPrefix + "numeric_value";
+
+             td = row.insertCell(-1);
+             td.id = match_id + "_Samantha";
+             td.className = classPrefix + "value";
+
+             td = row.insertCell(-1);
+             td.id = match_id + "_Min";
+             td.className = classPrefix + "numeric_value";
+
+             td = row.insertCell(-1);
+             td.id = match_id + "_Max";
+             td.className = classPrefix + "numeric_value";
+
+             td = row.insertCell(-1);
+             td.id = match_id + "_Battery";
+             td.className = classPrefix + "value";
+             createBar(td);
+
+             td = row.insertCell(-1);
+             td.id = match_id + "_Autonomous";
+             td.className = classPrefix + "value";
+
+             td = row.insertCell(-1);
+             td.id = match_id + "_Teleop";
+             td.className = classPrefix + "value";
+
+             td = row.insertCell(-1);
+             td.id = match_id + "_Firmware";
+             td.className = classPrefix + "value";
+
+             td = row.insertCell(-1);
+             td.id = match_id + "_Start";
+             td.className = classPrefix + "numeric_value";
+
+             td = row.insertCell(-1);
+             td.id = match_id + "_End";
+             td.className = classPrefix + "numeric_value";
+
+             td = row.insertCell(-1);
+             td.id = match_id + "_NXT_Disconnects";
+             td.className = classPrefix + "numeric_value";
+
+
+             var teams = "";
+             for (var kk = 0; kk < match.teams.length; kk++) {
+                var t = match.teams[kk];
+                if (t != null) {
+                   if (teams.length > 0)
+                      teams = teams + ", ";
+                      teams = teams + t.number;
+                   }
+                }
+
+             td = document.createElement("td");
+             td.className = classPrefix + "value";
+             td.innerHTML = match.status + " on " + match.time;
+             td.title = "Match #" + match.number;
+             td.setAttribute("onclick", "javascript:displayMatchForThisElement(this);");
+             row.appendChild(td);
+
+            var match_num = "";
+            if (team == currentTeam)
+                match_num = ">";
+            else
+                match_num = match.number;
+
+            populateMatchRow(match_id, team, match_num);
+        }
+        var div = document.getElementById("matchDetailsDiv");
+        div.className = "noscroll";
+        classPrefix = "";
+    }
+</script>
+<script type="text/javascript">
+    function displayMatchForThisElement(element) {
+        var matchTime = element.innerHTML;
+        var parts = matchTime.split(" ");
+        var matchTime = parts[parts.length - 3] + " " + parts[parts.length - 2] + " " + parts[parts.length - 1];
+
+        for (var ii = 0; ii < matchArray.length; ii++) {
+            var match = matchArray[ii];
+            if ( match.time == matchTime) {
+                displayThisMatch(match);
+                matchListDropDown.options.selectedIndex = ii;
+                currentSelectedMatch = match;
+                break;
+                }
+        }
+
+    }
+</script>
+<body onLoad="onLoad();">
+
+<div  style="width:100%;overflow:hidden;">
+<select class="wideselect" id="matchListDropDown" onChange="displayMatchDetails();">
+   <option value="">Choose a match....</option>
+</select>
+</div>
+
+<div class="scroll" id="matchDetailsDiv">
+<table id="matchDetailsTable" >
+<tr>
+<td></td>
+<td class="top_left_label" colspan="3">joysticks</td>
+<td class="top_label" colspan="4">Samantha</td>
+<td class="top_label" colspan="6">NXT</td>
+</tr>
+<tr>
+<td id="Match"></td>
+<td class="top_left_label">Sent</td>
+<td class="top_label">Lost</td>
+<td class="top_label">Disc</td>
+<td class="top_label">Firmware</td>
+<td class="top_label">Min(v)</td>
+<td class="top_label">Max(v)</td>
+<td class="top_label">Battery</td>
+<td class="top_label">Autonomous</td>
+<td class="top_label">Teleop</td>
+<td class="top_label">Firmware</td>
+<td class="top_label">Start(v)</td>
+<td class="top_label">End(v)</td>
+<td class="top_label">Disc(sec)</td>
+</tr>
+<tr id="Team_Red_1_Row">
+<td class="red_label" id="Team_Red_1_Label">
+   <table class="batteryBar">
+   <tr>
+   <td width="100%"  id="Team_Red_1"></td>
+   <td class="drill" id="Team_Red_1_Drill" onclick="ExpandCollapseTeamMatches('Team_Red_1');">+</td>
+   </tr>
+   </table>
+</td>
+<td class="top_numeric_value" id="Team_Red_1_Sent"></td>
+<td class="top_numeric_value" id="Team_Red_1_Lost"></td>
+<td class="top_numeric_value" id="Team_Red_1_Disconnects"></td>
+<td class="top_value" id="Team_Red_1_Samantha"></td>
+<td class="top_numeric_value" id="Team_Red_1_Min"></td>
+<td class="top_numeric_value" id="Team_Red_1_Max"></td>
+<td class="top_value" id="Team_Red_1_Battery">
+    <table class="batteryBar">
+    <tr>
+    <td class="batteryBar_0" id="Team_Red_1_Bar1"></td>
+    <td class="batteryBar_1"    id="Team_Red_1_Bar2"></td>
+    <td class="batteryBar_2"     id="Team_Red_1_Bar3"></td>
+    <td class="batteryBar_3"     id="Team_Red_1_Bar4"></td>
+    </tr>
+    </table>
+</td>
+<td class="top_value" id="Team_Red_1_Autonomous"></td>
+<td class="top_value" id="Team_Red_1_Teleop"></td>
+<td class="top_value" id="Team_Red_1_Firmware"></td>
+<td class="top_numeric_value" id="Team_Red_1_Start"></td>
+<td class="top_numeric_value" id="Team_Red_1_End"></td>
+<td class="top_numeric_value" id="Team_Red_1_NXT_Disconnects"></td>
+</tr>
+
+<tr id="Team_Red_2_Row">
+<td class="red_label" id="Team_Red_2_Label">
+   <table class="batteryBar">
+   <tr>
+   <td width="100%" id="Team_Red_2"></td>
+   <td class="drill" id="Team_Red_2_Drill" onclick="ExpandCollapseTeamMatches('Team_Red_2');">+</td>
+   </tr>
+   </table>
+</td>
+<td class="numeric_value" id="Team_Red_2_Sent"></td>
+<td class="numeric_value" id="Team_Red_2_Lost"></td>
+<td class="numeric_value" id="Team_Red_2_Disconnects"></td>
+<td class="value" id="Team_Red_2_Samantha"></td>
+<td class="numeric_value" id="Team_Red_2_Min"></td>
+<td class="numeric_value" id="Team_Red_2_Max"></td>
+<td class="value" id="Team_Red_2_Battery">
+    <table class="batteryBar">
+    <tr>
+    <td class="batteryBar_0" id="Team_Red_2_Bar1"></td>
+    <td class="batteryBar_1"    id="Team_Red_2_Bar2"></td>
+    <td class="batteryBar_2"     id="Team_Red_2_Bar3"></td>
+    <td class="batteryBar_3"     id="Team_Red_2_Bar4"></td>
+    </tr>
+    </table>
+</td>
+<td class="value" id="Team_Red_2_Autonomous"></td>
+<td class="value" id="Team_Red_2_Teleop"></td>
+<td class="value" id="Team_Red_2_Firmware"></td>
+<td class="numeric_value" id="Team_Red_2_Start"></td>
+<td class="numeric_value" id="Team_Red_2_End"></td>
+<td class="numeric_value" id="Team_Red_2_NXT_Disconnects"></td>
+</tr>
+
+<tr id="Team_Blue_1_Row">
+<td class="blue_label" id="Team_Blue_1_Label">
+   <table class="batteryBar">
+   <tr>
+   <td width="100%" id="Team_Blue_1"></td>
+   <td class="drill" id="Team_Blue_1_Drill" onclick="ExpandCollapseTeamMatches('Team_Blue_1');">+</td>
+   </tr>
+   </table>
+</td>
+<td class="numeric_value" id="Team_Blue_1_Sent"></td>
+<td class="numeric_value" id="Team_Blue_1_Lost"></td>
+<td class="numeric_value" id="Team_Blue_1_Disconnects"></td>
+<td class="value" id="Team_Blue_1_Samantha"></td>
+<td class="numeric_value" id="Team_Blue_1_Min"></td>
+<td class="numeric_value" id="Team_Blue_1_Max"></td>
+<td class="value" id="Team_Blue_1_Battery" >
+    <table class="batteryBar">
+    <tr>
+    <td class="batteryBar_0" id="Team_Blue_1_Bar1"></td>
+    <td class="batteryBar_1"    id="Team_Blue_1_Bar2"></td>
+    <td class="batteryBar_2"     id="Team_Blue_1_Bar3"></td>
+    <td class="batteryBar_3"     id="Team_Blue_1_Bar4"></td>
+    </tr>
+    </table>
+</td>
+<td class="value" id="Team_Blue_1_Autonomous"></td>
+<td class="value" id="Team_Blue_1_Teleop"></td>
+<td class="value" id="Team_Blue_1_Firmware"></td>
+<td class="numeric_value" id="Team_Blue_1_Start"></td>
+<td class="numeric_value" id="Team_Blue_1_End"></td>
+<td class="numeric_value" id="Team_Blue_1_NXT_Disconnects"></td>
+</tr>
+
+<tr id="Team_Blue_2_Row">
+<td class="blue_label" id="Team_Blue_2_Label">
+   <table class="batteryBar">
+   <tr>
+   <td width="100%" id="Team_Blue_2"></td>
+   <td class="drill" id="Team_Blue_2_Drill" onclick="ExpandCollapseTeamMatches('Team_Blue_2');">+</td>
+   </tr>
+   </table>
+</td>
+<td class="numeric_value" id="Team_Blue_2_Sent"></td>
+<td class="numeric_value" id="Team_Blue_2_Lost"></td>
+<td class="numeric_value" id="Team_Blue_2_Disconnects"></td>
+<td class="value" id="Team_Blue_2_Samantha"></td>
+<td class="numeric_value" id="Team_Blue_2_Min"></td>
+<td class="numeric_value" id="Team_Blue_2_Max"></td>
+<td class="value" id="Team_Blue_2_Battery">
+    <table class="batteryBar">
+    <tr>
+    <td class="batteryBar_0" id="Team_Blue_2_Bar1"></td>
+    <td class="batteryBar_1"    id="Team_Blue_2_Bar2"></td>
+    <td class="batteryBar_2"     id="Team_Blue_2_Bar3"></td>
+    <td class="batteryBar_3"     id="Team_Blue_2_Bar4"></td>
+    </tr>
+    </table>
+</td>
+<td class="value" id="Team_Blue_2_Autonomous"></td>
+<td class="value" id="Team_Blue_2_Teleop"></td>
+<td class="value" id="Team_Blue_2_Firmware"></td>
+<td class="numeric_value" id="Team_Blue_2_Start"></td>
+<td class="numeric_value" id="Team_Blue_2_End"></td>
+<td class="numeric_value" id="Team_Blue_2_NXT_Disconnects"></td>
+</tr>
+</table>
+</div>
+<hr>
+<div>
+
+
+<br>
+<iframe id="MatchLog" src="FTCMatch.html" style="display:none;">
+</iframe>
+</body>
+</html>
